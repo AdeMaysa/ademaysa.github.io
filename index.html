@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" />
     <!-- akhir icon -->
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- MY CSS -->
     <link rel="stylesheet" href="style.css" />
 
@@ -49,7 +52,7 @@
     <section class="jumbotron text-center">
       <img src="img/me.jfif" alt="Ade Maysa" width="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Ade Maysa</h1>
-      <p class="lead">Programer | Web Developer | Gamer</p>
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -69,10 +72,10 @@
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem unde aliquid consectetur et, ea eum dolor nobis ipsam cumque repudiandae?</p>
+          <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000">
+            <p>Saya sangat berpengalaman dalam dalam berbagai bahasa pemograman. Saya juga memiliki kemampuan dalam desain grafis.</p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti mollitia distinctio, doloremque accusantium non eius eaque in at neque earum facilis vitae nisi aliquam odit illum voluptatem enim explicabo ea.</p>
           </div>
         </div>
@@ -90,49 +93,49 @@
     <!-- Projects -->
     <section id="projects">
       <div class="container">
-        <div class="row text-center mb-3">
+        <div class="row text-center mt-5 mb-3">
           <div class="col">
             <h2>My Projects</h2>
           </div>
         </div>
         <div class="row justify-content-center">
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="1000">
               <img src="img/1.jpg"card-img-top" alt="projects1" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">Projects gabut bos</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="100">
               <img src="img/2.jpg"card-img-top" alt="projects2" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">bingung nulis apaan</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
               <img src="img/3.jpg"card-img-top" alt="projects3" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">suka2 gw dong ,gw yg buat</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="300">
               <img src="img/4.jpg"card-img-top" alt="projects4" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">hehheheheheehhe</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="400">
               <img src="img/5.jpg"card-img-top" alt="projects5" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">have a nice day everebadehhh</p>
               </div>
             </div>
           </div>
@@ -201,6 +204,24 @@
     </footer>
     <!-- Akhir Footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- aos script -->
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
+
+    <!-- GSap script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to('.lead', { duration: 2, delay: 1.5, text: 'Web Developer ni Boss' });
+      gsap.from('.jumbotron img', { duration: 1.5, rotationY: 360, opacity: 0 });
+      gsap.from('.display-4', { duration: 1, x: -50, opacity: 0, delay: 0.5, ease: 'back' });
+    </script>
 
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbx1fZS40KPPOHhDtOj2hjXw9Mtad23vvO89GzzLA_4pWJB3hCIswHZIzmcLtF7wU3WuFA/exec';
